@@ -1,22 +1,322 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>ZubanLS</title>
-    <body>
-        <h1>ZubanLS - The Zuban Language Server</h1>
-        <p>
-            ZubanLS is a language server for Python written in Rust.
-        </p>
-        <p>
-            This language server is not yet production ready, but we will start a closed alpha/beta soon.
-        </p>
-        <p>
-            If you want to know more send us an email @ (info (at) zubanls.com)
-            with the content "Subscribe Newsletter" to subscribe to our Newsletter.
-        </p>
-        <p>
-            Or follow us on <a href="https://x.com/zubanls">Twitter</a>.
-        </p>
-        Here's the <a href="https://github.com/zubanls/zubanls-python/issues">issue tracker</a>.
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZubanLS - The Language Server for Professionals</title>
+  <link rel="icon" type="image/svg+xml" href="/brandmark.svg" />
+  <link rel="stylesheet" href="/output.css" />
+  <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="/fontawesome/css/brands.min.css" />
+  <link rel="stylesheet" href="/fontawesome/css/solid.min.css" />
+          <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="https://zubanls.com/rss.xml" />
+          <link rel="alternate" type="application/atom+xml" title=" Atom Feed" href="https://zubanls.com/atom.xml" />
+
+  <script>
+    window.addEventListener("load", () => {
+      // Fuck spammers
+      const parts1 = ['info', '@', 'zubanls', '.com'];
+      const email = parts1.join('');
+      for (const el of document.getElementsByClassName('email-link')) {
+        el.href = 'mailto:' + email;
+        if (el.text.endsWith("zubanls.com")) {
+          el.text = email;
+        }
+      }
+
+      const parts2 = ['newsletter', '@', 'zubanls', '.com'];
+      const newsletter = parts2.join('');
+      for (const el of document.getElementsByClassName('subscribe-link')) {
+        el.href = 'mailto:' + newsletter + "?subject=Subscribe%20Newsletter&body=Please%20subscribe%20me%20to%20the%20Newsletter";
+      }
+    });
+  </script>
+</head>
+
+<body class="min-h-screen">
+  <header class="fixed w-full z-10">
+    <div class="flex justify-between m-auto items-end py-4">
+      <a href="/" class="shrink-0 pr-8">
+        <img id="logo" src="/logo.svg" alt="ZubanLS" class="-mt-">
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="peer hidden" />
+      <label for="menu-toggle" class="md:hidden cursor-pointer text-xl ml-auto p-[9px]">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <nav class="peer-checked:flex hidden md:flex flex-col md:flex-row md:items-center gap-4 md:gap-6 absolute md:static top-full left-0 w-full md:w-auto bg-zuban-background md:ml-auto md:bg-transparent p-4 md:p-[6px] z-10">
+        <a href="/#language-server">Language&nbsp;Server</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog">News</a>
+        <a href="https://docs.zubanls.com" target="_blank" rel="noopener">
+          <span class="whitespace-nowrap">
+            Docs
+            <i class="fas fa-up-right-from-square text-sm"></i>
+          </span>
+        </a>
+      </nav>
+
+      <a href="https://github.com/zubanls/zubanls" id="github-logo" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block text-xl z-10 pl-6 md:pb-[6px]">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex flex-col w-full">
+    <div class="absolute inset-0 w-full h-screen min-h-180 -z-1">
+      <script src="/tree.js"></script>
+      <canvas id="tree-canvas" class="w-full h-500px absolute -mt-30 mx-auto inset-x-0"></canvas>
+    </div>
+    <div class="absolute left-0 top-0 right-0 -bottom-[20vh] overflow-hidden -z-2 hero-gradient">
+      <div class="w-full h-full"></div>
+    </div>
+    
+    <section>
+      <h1>The Python Language Server for Professionals</h1>
+      <p class="text-center text-[1.8em] max-w-4xl text-zuban-white-orange font-lato-bold mx-auto">A Mypy-compatible Python Language Server built in Rust</p>
+
+      <div class="mx-auto max-w-88 pl-20 py-8 text-lg">
+        <p class=""><i class="fas fa-check"></i> Standards&#8288;-&#8288;compliant</p>
+        <p class="py-1"><i class="fas fa-check"></i> Fully Featured Type System</p>
+        <p class=""><i class="fas fa-check"></i> Unparalleled Performance</p>
+      </div>
+
+      <div class="mx-auto text-center">
+        <a href="/pricing" role="button" class="inline-block bg-zuban-background text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:brightness-110 transition border-white border-1">
+        Free For Most
+        </a>
+        <a href="https://docs.zubanls.com/en/latest/installation.html" target="_blank" role="button" class="inline-block orange-red-button ml-2">
+          Download
+        </a>
+      </div>
+    </section>
+
+    <section class="hero-tiles">
+      <div>
+        <div>
+          <h2>Performance</h2>
+          <img src="/acorn.png" class="mx-2" />
+          <p>
+            Extremely fast. Generally 20-200x faster than Mypy - and optimized for lower memory usage.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Features</h2>
+          <img src="/laptop.png" class="w-26 pt-4" />
+          <p>
+            <span class="font-lato-bold">Only diagnostics are supported</span>. Features such as completions and go-to-definition are currently in development.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Creation</h2>
+          <img src="/tree.png" />
+          <p>
+            Developed by the creator of <a class="font-lato-bold" href="https://github.com/davidhalter/jedi" target="_blank" rel="noopener noreferrer">Jedi</a>, ZubanLS applies 14 years of experience in Python auto-completion and static analysis.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Alpha</h2>
+          <img src="/gears.png" />
+          <p>
+            As an Alpha release, some false positives are expected. <a href="https://github.com/zubanls/zubanls/issues" target="_blank" rel="noopener noreferrer">Issues</a> will be addressed promptly. A beta release will soon be available.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="language-server" class="pt-32 **:text-center">
+      <h2>Works in <a class="text-zuban-orange-light" href="https://docs.zubanls.com/en/latest/installation.html#vscode" target="_blank">VSCode</a>,</h2>
+      <img src="/vscode.png" alt="ZubanLS" class="rounded-lg mx-auto pt-2" />
+
+      <h2 class="pt-16"><a class="text-zuban-yellow-light" href="https://docs.zubanls.com/en/latest/installation.html#vim" target="_blank">Vim</a>,</h2>
+      <img src="/vim.png" alt="ZubanLS" class="rounded-lg mx-auto pt-2" />
+
+      <h2 class="pt-16">and all <a class="text-zuban-pink" href="https://docs.zubanls.com/en/latest/installation.html" target="_blank">other</a> <span class="whitespace-nowrap">LSP-compatible</span> editors</h2>
+      <p>This includes Helix, NeoVIM, SublimeText, Emacs, Zed and many others
+    </section>
+
+    <section class="mt-8 flex justify-center">
+      <a
+        class="subscribe-link inline-block rounded-lg bg-zuban-wine px-4 py-2 text-white hover:brightness-110"
+        aria-label="Send email to subscribe to the newsletter"
+      >
+        Subscribe via Email
+      </a>
+    </section>
+
+    <section class="pt-32 text-center p-0 m-0 max-w-full shadow-2xl">
+      <div class="relative py-16 overflow-hidden">
+        <div class="absolute inset-0 -z-2 second-gradient w-[80%]">
+          <div class="w-full h-full"></div>
+        </div>
+        <div class="absolute inset-x-0 top-0 -bottom-[20vh] -z-1 turing-pattern">
+        </div>
+        <h2><a class="text-zuban-background" href="https://docs.zubanls.com/en/latest/installation.html" target="_blank" rel="noopener noreferrer">pip install zuban</a></h2>
+        <img src="/terminal.png" alt="ZubanLS" class="rounded-lg mx-auto pt-2" />
+      </div>
+    </section>
+
+    <section class="pt-32">
+      <h2 class="text-center">All Features</h2>
+
+      <div class="feature-list pt-8">
+        <div>
+          <h4><i class="fas fa-gears"></i> Development Tooling</h4>
+          <ul>
+            <li>Mypy config compatibility</li>
+            <li>Error recovery</li>
+            <li>Incremental checking</li>
+            <li>Watches files</li>
+            <li>Python 3.13 support</li>
+          </ul>
+        </div>
+        <div>
+          <h4><i class="fas fa-file-code"></i> General Code Understanding</h4>
+          <ul>
+            <li>Passes &gt;95% of Mypy's relevant tests
+            <li>Relative, absolute, and stub-only (`.pyi`) imports</li>
+            <li>Type narrowing isinstance, assert, etc
+            <li>Inferring the type context</li>
+            <li>Mypy's --new-type-inference</li>
+            <li>Understanding list.append, etc</li>
+          </ul>
+        </div>
+        <div>
+          <h4><i class="fas fa-bolt"></i> Performance</h4>
+          <ul>
+            <li>Written in Rust</li>
+            <li>More than 20-200x faster than Mypy</li>
+            <li>Optimized to minimize memory usage</li>
+          </ul>
+        </div>
+        <div>
+          <h4><i class="fas fa-keyboard"></i> Type System Support</h4>
+          <ul>
+            <li>TypeVar / TypeVarTuple / ParamSpec</li>
+            <li>Overloads / NewType / Overrides</li>
+            <li>Dataclasses / dataclass_transform</li>
+            <li>TypedDict / NamedTuple / Enum</li>
+            <li>NewType</li>
+            <li>Protocols / Union Types</li>
+            <li>Literal Types</li>
+            <li>Final / ClassVar / Annotated</li>
+            <li>Self Types</li>
+            <li>Generic Defaults</li>
+            <li>TypeGuard / TypeIs</li>
+            <li>... and much more</li>
+          </ul>
+        </div>
+        <div>
+          <h4><i class="fas fa-terminal"></i> Executables</h4>
+          <ul>
+            <li>zubanls - A language server</li>
+            <li>zmypy - A drop in replacement for Mypy</li>
+            <li>Works on Linux, Mac and Windows</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Others fa-laptop-code fa-code fa-bug-slash -->
+
+      <div class="text-center pt-8 max-w-xl mx-auto">
+        A more comprehensive list can be found in the
+        <a class="hover:text-stone-300 underline" href="https://docs.zubanls.com/en/latest/features.html" target="_blank" rel="noopener">Documentation</a>.
+        General plugin support is not planned; however, targeted plugins for popular libraries, such as Django, will be provided.
+      </div>
+    </section>
+
+    <section class="pt-32">
+      <div class="tile-light flex items-center">
+        <div>
+          <h3 class="py-0">Pricing</h3>
+          <p>
+            <p class="font-lato-bold">During the <span class="text-zuban-orange">alpha</span> period, all ZubanLS releases are available at a <span class="text-zuban-orange">100% discount</span>. Happy coding!</p>
+          </p>
+          <p>
+            Pricing is based on code size—a simple metric. Most users receive the language server for free; only large codebases require a paid license.
+          </p>
+          <p>
+            <a href="/pricing">Learn more </a>
+          </p>
+        </div>
+        <img src="file-tree.png" alt="ZubanLS" class="relative px-8 h-54 opacity-80 hidden lg:block" />
+      </div>
+    </section>
+
+    <section id="company" class="relative pt-32">
+      <h2 class="text-center">The ZubanLS Company</h2>
+      <div class="absolute inset-0 -z-1 turing-pattern opacity-60"></div>
+      <div class="pt-8 px-4 flex flex-wrap bio order-1 lg:order-last">
+        <div class="lg:w-5/8">
+          <p>In 2012, I created <a class="font-lato-bold" href="https://pypi.org/project/jedi/" target="_blank" rel="noopener noreferrer">Jedi</a>—a Python auto-completion library that eventually reached millions of users and billions of downloads. But as the ecosystem evolved, one limitation became clear: speed. Jedi’s architecture couldn’t deliver the performance needed for large-scale projects.</p>
+          <p>In 2020, I started over—with everything I’d learned—building ZubanLS from the ground up in Rust. After five years of full-time work, ZubanLS is now the first truly fast Python language server.</p>
+          <p>ZubanLS is built for professionals who need precision, reliability and speed. It addresses long-standing issues in tools like Mypy and Pyright by focusing on performance without compromising features. Support for Django, go-to-definition, completions, and other LSP features is underway. The goal: a tool for perfectionists with deadlines.</p>
+          <p>The initial 2025 release may not meet every need. If something essential is missing for your use case, feel free to <a class="email-link underline decoration-dotted hover:decoration-solid hover:text-stone-300">reach out</a>—we’re open to implementing features based on real-world demand.</p>
+        </div>
+        <div class="pr-8 pt-8 lg:pt-0 lg:w-3/8 order-2 lg:order-first">
+          <div class="flex items-center lg:justify-center">
+            <img src="/dave.jpg" alt="ZubanLS" class="person" />
+            <div>
+              <h4>David Halter</h4>
+              <p>Founder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pt-32 pb-8 text-stone-300">
+    <div class="footer-links pb-16 md:pb-48">
+      <div class="order-last md:order-first w-full md:w-1/2 my-auto pt-16 md:pt-0">
+        <a href="/" class="shrink-0 md:pr-8">
+          <img src="/wordmark.svg" alt="ZubanLS" class="md:rotate-270 md:origin-top-right md:-translate-x-full max-w-48 mx-auto md:mx-0" />
+        </a>
+      </div>
+
+      <div>
+        <h5>Resources</h5>
+        <a href="https://github.com/zubanls/zubanls/issues" target="_blank" rel="noopener noreferrer">Issue Tracker</a>
+        <a href="https://pypi.org/project/zuban/" target="_blank" rel="noopener noreferrer">Pip Package</a>
+        <a href="https://github.com/zubanls/vscode-zubanls/issues" target="_blank" rel="noopener noreferrer">VSCode Plugin</a>
+      </div>
+      <div>
+        <h5>Learn</h5>
+        <a href="https://docs.zubanls.com" target="_blank">Docs</a>
+        <a href="/blog">News</a>
+        <a href="/#company">Company</a>
+        <a href="/pricing">Pricing</a>
+      </div>
+      <div>
+        <h5>Contact ZubanLS</h5>
+        <a class="email-link" target="_blank">Email</a>
+        <a href="https://github.com/zubanls/zubanls/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
+        <a href="https://docs.zubanls.com/en/latest/license.html" target="_blank" rel="noopener noreferrer">Licensing</a>
+      </div>
+    </div>
+    <div class="flex justify-between items-center">
+      <span>&copy; 2025 David Halter</span>
+      <span><a class="email-link underline">info (at) zubanls.com</a></span>
+      <span class="flex items-center gap-2">
+        <a href="https://twitter.com/zubanls" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-twitter text-xl"></i>
+        </a>
+        <a href="https://github.com/zubanls/zubanls" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github text-xl"></i>
+        </a>
+      </span>
+    </div>
+  </footer>
+</body>
 </html>

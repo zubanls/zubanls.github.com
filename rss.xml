@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title></title>
+      <link>https://zubanls.com</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://zubanls.com/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Public Alpha Release</title>
+          <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+          <author>David Halter</author>
+          <link>https://zubanls.com/blog/release/</link>
+          <guid>https://zubanls.com/blog/release/</guid>
+          <description xml:base="https://zubanls.com/blog/release/">&lt;h3 id=&quot;a-personal-note&quot;&gt;A Personal Note&lt;&#x2F;h3&gt;
+&lt;p&gt;After five years of hard work, I&#x27;m proud to release the first alpha of ZubanLS. My journey began in 2012 with the creation of &lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pypi.org&#x2F;project&#x2F;jedi&#x2F;&quot;&gt;Jedi&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt;—a Python auto-completion library that would go on to reach millions of users and billions of downloads.&lt;&#x2F;p&gt;
+&lt;p&gt;If you’re encountering issues, I’d love to hear about them. I’m especially interested in real-world cases, and I encourage you to &lt;a class=&quot;email-link&quot;&gt;reach out to us&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</description>
+      </item>
+    </channel>
+</rss>
