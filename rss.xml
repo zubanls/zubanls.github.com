@@ -7,7 +7,37 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://zubanls.com/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Performance &amp; Unifying Executables</title>
+          <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+          <author>David Halter</author>
+          <link>https://zubanls.com/blog/performance/</link>
+          <guid>https://zubanls.com/blog/performance/</guid>
+          <description xml:base="https://zubanls.com/blog/performance/">&lt;h3 id=&quot;v0-0-20-performance&quot;&gt;v0.0.20: Performance&lt;&#x2F;h3&gt;
+&lt;p&gt;The latest release (v0.0.20) brings both performance improvements and a unified
+way of accessing the type checker and language server.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Passing Conformance Tests</title>
+          <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+          <author>David Halter</author>
+          <link>https://zubanls.com/blog/conformance-tests/</link>
+          <guid>https://zubanls.com/blog/conformance-tests/</guid>
+          <description xml:base="https://zubanls.com/blog/conformance-tests/">&lt;h3 id=&quot;conformance-with-python-s-typing-tests&quot;&gt;Conformance with Python’s Typing Tests&lt;&#x2F;h3&gt;
+&lt;p&gt;In version 0.0.19, ZubanLS now passes a large number of Python typing
+&lt;a href=&quot;https:&#x2F;&#x2F;htmlpreview.github.io&#x2F;?https:&#x2F;&#x2F;github.com&#x2F;python&#x2F;typing&#x2F;blob&#x2F;main&#x2F;conformance&#x2F;results&#x2F;results.html&quot;&gt;conformance tests&lt;&#x2F;a&gt;,
+bringing it even closer to Mypy’s behavior.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Extended LSP Support</title>
+          <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+          <author>David Halter</author>
+          <link>https://zubanls.com/blog/lsp/</link>
+          <guid>https://zubanls.com/blog/lsp/</guid>
+          <description xml:base="https://zubanls.com/blog/lsp/">&lt;h3 id=&quot;improved-support-for-ide-users&quot;&gt;Improved Support for IDE Users&lt;&#x2F;h3&gt;
+&lt;p&gt;I’m excited to share that ZubanLS now supports a much broader set of Language Server Protocol features.&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>Public Alpha Release</title>
           <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>

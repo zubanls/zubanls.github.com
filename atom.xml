@@ -4,8 +4,65 @@
     <link rel="self" type="application/atom+xml" href="https://zubanls.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://zubanls.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-06-10T00:00:00+00:00</updated>
+    <updated>2025-08-28T00:00:00+00:00</updated>
     <id>https://zubanls.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Performance &amp; Unifying Executables</title>
+        <published>2025-08-28T00:00:00+00:00</published>
+        <updated>2025-08-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            David Halter
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zubanls.com/blog/performance/"/>
+        <id>https://zubanls.com/blog/performance/</id>
+        
+        <summary type="html">&lt;h3 id=&quot;v0-0-20-performance&quot;&gt;v0.0.20: Performance&lt;&#x2F;h3&gt;
+&lt;p&gt;The latest release (v0.0.20) brings both performance improvements and a unified
+way of accessing the type checker and language server.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Passing Conformance Tests</title>
+        <published>2025-08-11T00:00:00+00:00</published>
+        <updated>2025-08-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            David Halter
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zubanls.com/blog/conformance-tests/"/>
+        <id>https://zubanls.com/blog/conformance-tests/</id>
+        
+        <summary type="html">&lt;h3 id=&quot;conformance-with-python-s-typing-tests&quot;&gt;Conformance with Python’s Typing Tests&lt;&#x2F;h3&gt;
+&lt;p&gt;In version 0.0.19, ZubanLS now passes a large number of Python typing
+&lt;a href=&quot;https:&#x2F;&#x2F;htmlpreview.github.io&#x2F;?https:&#x2F;&#x2F;github.com&#x2F;python&#x2F;typing&#x2F;blob&#x2F;main&#x2F;conformance&#x2F;results&#x2F;results.html&quot;&gt;conformance tests&lt;&#x2F;a&gt;,
+bringing it even closer to Mypy’s behavior.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Extended LSP Support</title>
+        <published>2025-07-31T00:00:00+00:00</published>
+        <updated>2025-07-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            David Halter
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://zubanls.com/blog/lsp/"/>
+        <id>https://zubanls.com/blog/lsp/</id>
+        
+        <summary type="html">&lt;h3 id=&quot;improved-support-for-ide-users&quot;&gt;Improved Support for IDE Users&lt;&#x2F;h3&gt;
+&lt;p&gt;I’m excited to share that ZubanLS now supports a much broader set of Language Server Protocol features.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Public Alpha Release</title>
         <published>2025-06-10T00:00:00+00:00</published>

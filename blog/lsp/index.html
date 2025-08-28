@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ZubanLS - News</title>
+  <title>ZubanLS - Extended LSP Support</title>
   <link rel="icon" type="image/svg+xml" href="/brandmark.svg" />
   <link rel="stylesheet" href="/output.css" />
   <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css" />
@@ -72,8 +72,8 @@
       <div class="w-full h-full"></div>
     </div>
     
-    <section class="blog-overview relative">
-      <div class="absolute absolute-in-content inset-x-0 flex justify-end px-8">
+  <section> 
+    <div class="absolute absolute-in-content inset-x-0 flex justify-end px-8">
   <div class="-mr-4 md:mr-0 lg:mr-8">
     <a href="/rss.xml" role="button" class="inline-block mt-16 text-md text-white font-lato-bold px-6 py-2 rounded-lg hover:bg-white/30 transition border-white">
       <i class="fas fa-rss"></i> RSS Feed
@@ -81,72 +81,40 @@
   </div>
 </div>
 
-      <h1>News</h1>
+    <h1>Extended LSP Support</h1>
+    <div class="tile-light">
+      <div class="flex flex-wrap w-full">
+        <div class="w-full lg:w-5/8">
+          <h3 id="improved-support-for-ide-users">Improved Support for IDE Users</h3>
+<p>I’m excited to share that ZubanLS now supports a much broader set of Language Server Protocol features.</p>
+<span id="continue-reading"></span>
+<p><strong>ZubanLS 0.0.18</strong> now supports a much broader set of LSP features. In addition
+to diagnostics, it can provide <strong>completions</strong>, <strong>go-to</strong> functionality (for
+definitions, declarations, implementations, and type definitions), hover
+information, <strong>references</strong>, document highlights, and even <strong>renaming</strong>. This
+brings ZubanLS much closer to the experience you would expect from a fully
+featured language server, with only some smaller pieces such as call signatures
+and semantic tokens still on the roadmap.</p>
+<h3 id="untyped-return-inference">Untyped Return Inference</h3>
+<p>On top of that, <code>zuban check</code> now includes type inference for untyped return
+types.</p>
+<p>Untyped return type inference is especially useful when working with code that
+doesn’t have explicit type annotations. It allows ZubanLS to infer a reasonable
+return type based on the function body, so functions like <code>def foo(x): return [x]</code> no longer appear as returning <code>Any</code> but instead as <code>list[T]</code>. This greatly
+improves type safety, since downstream code can be type-checked more precisely,
+while still keeping the flexibility of writing unannotated code. It also makes
+completions, hover information, and error reporting more accurate in untyped
+codebases.</p>
 
-      
-
-      
-        <div class="tile-light ">
-          <a href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;performance&#x2F;" class="text-xl text-zuban-violet hover:underline">
-            Performance &amp; Unifying Executables
-          </a>
-          <p class="text-sm text-stone-700">
-            2025-08-28
-          </p>
-          
-            <p class=""><h3 id="v0-0-20-performance">v0.0.20: Performance</h3>
-<p>The latest release (v0.0.20) brings both performance improvements and a unified
-way of accessing the type checker and language server.</p></p>
-          
-          <p><a class="font-lato-bold" href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;performance&#x2F;">Continue Reading</a></p>
         </div>
-      
-        <div class="tile-light mt-4 ">
-          <a href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;conformance-tests&#x2F;" class="text-xl text-zuban-violet hover:underline">
-            Passing Conformance Tests
-          </a>
-          <p class="text-sm text-stone-700">
-            2025-08-11
-          </p>
-          
-            <p class=""><h3 id="conformance-with-python-s-typing-tests">Conformance with Python’s Typing Tests</h3>
-<p>In version 0.0.19, ZubanLS now passes a large number of Python typing
-<a href="https://htmlpreview.github.io/?https://github.com/python/typing/blob/main/conformance/results/results.html">conformance tests</a>,
-bringing it even closer to Mypy’s behavior.</p></p>
-          
-          <p><a class="font-lato-bold" href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;conformance-tests&#x2F;">Continue Reading</a></p>
+        <div class="w-full lg:w-3/8 pt-16 lg:pt-24 lg:pl-20">
+          <img src="/dave.jpg" alt="ZubanLS" class="person person-blog" />
+          <h4>David Halter</h4>
+          <p class="pt-0">Founder</p>
         </div>
-      
-        <div class="tile-light mt-4 ">
-          <a href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;lsp&#x2F;" class="text-xl text-zuban-violet hover:underline">
-            Extended LSP Support
-          </a>
-          <p class="text-sm text-stone-700">
-            2025-07-31
-          </p>
-          
-            <p class=""><h3 id="improved-support-for-ide-users">Improved Support for IDE Users</h3>
-<p>I’m excited to share that ZubanLS now supports a much broader set of Language Server Protocol features.</p></p>
-          
-          <p><a class="font-lato-bold" href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;lsp&#x2F;">Continue Reading</a></p>
-        </div>
-      
-        <div class="tile-light mt-4 ">
-          <a href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;release&#x2F;" class="text-xl text-zuban-violet hover:underline">
-            Public Alpha Release
-          </a>
-          <p class="text-sm text-stone-700">
-            2025-06-10
-          </p>
-          
-            <p class=""><h3 id="a-personal-note">A Personal Note</h3>
-<p>After five years of hard work, I'm proud to release the first alpha of ZubanLS. My journey began in 2012 with the creation of <strong><a href="https://pypi.org/project/jedi/">Jedi</a></strong>—a Python auto-completion library that would go on to reach millions of users and billions of downloads.</p>
-<p>If you’re encountering issues, I’d love to hear about them. I’m especially interested in real-world cases, and I encourage you to <a class="email-link">reach out to us</a>.</p></p>
-          
-          <p><a class="font-lato-bold" href="https:&#x2F;&#x2F;zubanls.com&#x2F;blog&#x2F;release&#x2F;">Continue Reading</a></p>
-        </div>
-      
-    </section>
+      </div>
+    </div>
+  </section>
 
   </main>
 
