@@ -7,7 +7,16 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://zubanls.com/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 03 Sep 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Zuban ❤️ Open Source</title>
+          <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+          <author>David Halter</author>
+          <link>https://zubanls.com/blog/open-source/</link>
+          <guid>https://zubanls.com/blog/open-source/</guid>
+          <description xml:base="https://zubanls.com/blog/open-source/">&lt;h3 id=&quot;finally-open-source&quot;&gt;Finally Open Source&lt;&#x2F;h3&gt;
+&lt;p&gt;I’m excited to share that Zuban is now Open Source under the AGPL license. This wasn’t my original plan—I initially envisioned a freemium model—but with the arrival of Ty and PyreFly, that path no longer made sense.&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>Performance &amp; Unifying Executables</title>
           <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
