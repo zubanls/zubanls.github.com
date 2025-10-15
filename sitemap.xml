@@ -7,6 +7,10 @@
         <loc>https://zubanls.com/blog/</loc>
     </url>
     <url>
+        <loc>https://zubanls.com/blog/beta/</loc>
+        <lastmod>2025-09-03</lastmod>
+    </url>
+    <url>
         <loc>https://zubanls.com/blog/conformance-tests/</loc>
         <lastmod>2025-08-11</lastmod>
     </url>

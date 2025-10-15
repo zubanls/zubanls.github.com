@@ -9,6 +9,17 @@
       <atom:link href="https://zubanls.com/rss.xml" rel="self" type="application/rss+xml"/>
       <lastBuildDate>Wed, 03 Sep 2025 00:00:00 +0000</lastBuildDate>
       <item>
+          <title>Beta Release</title>
+          <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+          <author>David Halter</author>
+          <link>https://zubanls.com/blog/beta/</link>
+          <guid>https://zubanls.com/blog/beta/</guid>
+          <description xml:base="https://zubanls.com/blog/beta/">&lt;h3 id=&quot;beta-release&quot;&gt;Beta Release&lt;&#x2F;h3&gt;
+&lt;p&gt;I’m excited to announce the Zuban &lt;strong&gt;beta release&lt;&#x2F;strong&gt;!  Zuban now supports all key
+features of a Python Language Server — including &lt;strong&gt;completions&lt;&#x2F;strong&gt;, &lt;strong&gt;rename&lt;&#x2F;strong&gt;,
+and type checking — with auto-imports coming soon.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
           <title>Zuban ❤️ Open Source</title>
           <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
           <author>David Halter</author>
