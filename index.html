@@ -107,7 +107,7 @@
           <h2>Features</h2>
           <img src="/laptop.png" class="w-26 pt-4" />
           <p>
-            Most LSP features are implemented, completions, goto, references, diagnostics and rename included.
+            All relevant LSP features are implemented, completions, goto, references, diagnostics and rename included.
           </p>
         </div>
       </div>
@@ -127,7 +127,7 @@
           <h2>Beta</h2>
           <img src="/gears.png" />
           <p>
-            As an Beta release, some false positives are expected. <a href="https://github.com/zubanls/zuban/issues" target="_blank" rel="noopener noreferrer">Issues</a> will be addressed promptly.
+            As a Beta release, some false positives are expected. <a href="https://github.com/zubanls/zuban/issues" target="_blank" rel="noopener noreferrer">Issues</a> will be addressed promptly.
           </p>
         </div>
       </div>
@@ -173,11 +173,12 @@
           <h4><i class="fas fa-gears"></i> Development Tooling</h4>
           <ul>
             <li>Mypy config compatibility</li>
-            <li>LSP Support: Completions, Goto, Hover, Rename, References</li>
+            <li>LSP Support: Completions, Goto, Hover, Rename, References, Auto-Import</li>
             <li>Error recovery</li>
             <li>Incremental checking</li>
             <li>Watches files</li>
             <li>Python 3.13 support</li>
+            <li>Django support</li>
           </ul>
         </div>
         <div>
@@ -232,7 +233,7 @@
       <div class="text-center pt-8 max-w-xl mx-auto">
         A more comprehensive list can be found in the
         <a class="hover:text-stone-300 underline" href="https://docs.zubanls.com/en/latest/features.html" target="_blank" rel="noopener">Documentation</a>.
-        General plugin support is not planned; however, targeted plugins for popular libraries, such as Django, will be provided.
+        General plugin support is not planned; however, targeted plugins for popular libraries, such as Django, are provided.
       </div>
     </section>
 
@@ -262,8 +263,8 @@
         <div class="lg:w-5/8">
           <p>In 2012, I created <a class="font-lato-bold" href="https://pypi.org/project/jedi/" target="_blank" rel="noopener noreferrer">Jedi</a>—a Python auto-completion library that eventually reached millions of users and billions of downloads. But as the ecosystem evolved, one limitation became clear: speed. Jedi’s architecture couldn’t deliver the performance needed for large-scale projects.</p>
           <p>In 2020, I started over—with everything I’d learned—building ZubanLS from the ground up in Rust. After five years of full-time work, ZubanLS is now the first truly fast Python language server.</p>
-          <p>ZubanLS is built for professionals who need precision, reliability and speed. It addresses long-standing issues in tools like Mypy and Pyright by focusing on performance without compromising features. Support for Django, go-to-definition, completions, and other LSP features is underway. The goal: a tool for perfectionists with deadlines.</p>
-          <p>The initial 2025 release may not meet every need. If something essential is missing for your use case, feel free to <a class="email-link underline decoration-dotted hover:decoration-solid hover:text-stone-300">reach out</a>—we’re open to implementing features based on real-world demand.</p>
+          <p>ZubanLS is built for professionals who need precision, reliability and speed. It addresses long-standing issues in tools like Mypy and Pyright by focusing on performance without compromising features. Support for Django, go-to-definition, completions, and all other important LSP features have been implemented. The goal: a tool for perfectionists with deadlines.</p>
+          <p>If something essential is missing for your use case, feel free to <a class="email-link underline decoration-dotted hover:decoration-solid hover:text-stone-300">reach out</a>—we’re open to implementing features based on real-world demand.</p>
         </div>
         <div class="pr-8 pt-8 lg:pt-0 lg:w-3/8 order-2 lg:order-first">
           <div class="flex items-center lg:justify-center">
